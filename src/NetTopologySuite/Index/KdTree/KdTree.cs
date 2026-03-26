@@ -326,7 +326,7 @@ namespace NetTopologySuite.Index.KdTree
             }
         }
 
-        class QueryStackFrame
+        readonly struct QueryStackFrame
         {
             public QueryStackFrame(KdNode<T> node, bool isXLevel)
             {
@@ -336,7 +336,7 @@ namespace NetTopologySuite.Index.KdTree
 
             public KdNode<T> Node { get; }
 
-            public bool IsXLevel { get; } = false;
+            public bool IsXLevel { get; }
         }
 
         /// <summary>
